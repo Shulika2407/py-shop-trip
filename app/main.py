@@ -3,7 +3,9 @@ from app.customer import Customer
 import datetime
 
 
-def shop_trip(customer: Customer, shop: Shop) -> None:
+def shop_trip() -> None:
+    customer = Customer
+    shop = Shop
     print(f"{customer.name} has {customer.money} dollars")
     print(f"{customer.name}'s trip to the"
           f" {shop.name} costs {shop.shopping_cost(customer)}")

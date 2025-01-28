@@ -20,7 +20,6 @@ class Shop:
             products=data["products"]
         )
 
-    @staticmethod
     def load_customers(self) -> list:
         with open("config.json", "r") as file:
             data = json.load(file)
@@ -44,7 +43,7 @@ class Shop:
         return product
 
     def shopping_cost(self, customer: Customer) -> float:
-        self.load_customers(self)
+        Shop.load_customers(self)
         cost_of_trip = self.calculate_cost_to_reach(customer) * 2
         cost_of_products = self.money_for_products(customer)
         return round((cost_of_products + cost_of_trip), 2)
