@@ -15,15 +15,15 @@ def shop_trip(customer: Customer, shop: Shop) -> None:
         print(f"Date: {datetime.datetime.now()}")
         print(f"Thanks, {customer.name}, for your purchase!")
         print("You have bought: ")
-        print(f"{customer.product_cart["milk"]}"
-              f" milks for {customer.product_cart["milk"] 
-                            * shop.products["milk"]} dollars")
-        print(f"{customer.product_cart["bread"]}"
-              f" breads for {customer.product_cart["bread"] 
-                             * shop.products["bread"]} dollars")
-        print(f"{customer.product_cart["butter"]}"
-              f" butters for {customer.product_cart["butter"] 
-                              * shop.products["butter"]} dollars")
+        print(f"{customer.product_cart['milk']}"
+              f" milks for {customer.product_cart['milk'] 
+                            * shop.products['milk']} dollars")
+        print(f"{customer.product_cart['bread']}"
+              f" breads for {customer.product_cart['bread'] 
+                             * shop.products['bread']} dollars")
+        print(f"{customer.product_cart['butter']}"
+              f" butters for {customer.product_cart['butter'] 
+                              * shop.products['butter']} dollars")
         print(f"Total cost is"
               f" {shop.money_for_products(customer)} dollars")
         print("See you again!")

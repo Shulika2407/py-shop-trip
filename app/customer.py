@@ -7,7 +7,7 @@ from app.car import Car
 class Customer:
     name: str
     product_cart: dict[str, int]
-    location: list[int, int]
+    location: tuple[int, int]
     money: int
     car: Car
 
@@ -22,7 +22,7 @@ class Customer:
         )
 
     @staticmethod
-    def load_customers() -> list:
+    def load_shops() -> list:
         with open("config.json", "r") as file:
             data = json.load(file)
 
